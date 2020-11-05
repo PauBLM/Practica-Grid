@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        /**/
+
+        .pagina {
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .barra {
+            max-width: 100%;
+            
+            margin: 0 50px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+
+        .botones a {
+            padding: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: sans-serif;
+
+            transition: all 1s;
+        }
+
+        .botones a:hover {
+            color: hotpink;
+        }
+
+      
+        .logo {
+            width: 100px;
+            height: auto;
+            margin: 20px;
+        }
+
+        .caja {
+            display: flex;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        .caja img {
+            width: 200px;
+            
+        }
+
+        .caja a {
+            color: hotpink;
+            padding: 20px;
+        }
+
+        .caja a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #FE5D8F;
+            margin-top: 3px;
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+
+            transition: all 0.5s;
+        }
+
+        .caja a:hover::after {
+            opacity: 1;
+            width: 100%;
+        }
+
+        .caja p{
+            font-size: 15px;
+            font-weight: lighter;
+            width: 500px;
+        }
+
+
+        .caja1 {
+            background-color: #ffee9e;
+        }
+        
+        .caja1 img {
+            width: 400px;
+        }
+
+        h1 {
+            color: rgb(96, 96, 247);
+            font-size: 40px;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 30px;
+            background-color: rgb(96, 96, 247);
+            margin: 20px auto;
+        }
+
+        h3 {
+            color: white;
+            font-size: 30px;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+        }
+
+        h3::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 30px;
+            background-color: white;
+            margin: 20px auto;
+        }
+
+        .caja2 {
+            background-color: lightskyblue;
+        }
+
+        .caja3 {
+            background-color: lightpink;
+        }
+
+        @media all and (min-width: 900px)  {
+
+            .pagina {
+                display: grid;
+                grid-template-columns: repeat(3,auto);
+
+            }
+
+            .barra {
+               grid-column: 1/4;
+            }
+
+            .caja1 {
+                grid-column: 1 / span 2;
+                grid-row: 2 / span 2;
+            }
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <section class="pagina">
+
+        <nav class="barra">
+            <img class="logo" src="images/graphics-logo.png" alt="logo">
+                <div class="botones">
+                        <a href="#">Products</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                </div>
+        </nav>
+
+        <section class="caja caja1">
+            <img class="pic1" src="images/graphics01.png" alt="pic1">
+                <div>
+                    <h1>Un titulo super impactante</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto reprehenderit numquam quae aspernatur placeat nam rerum impedit facere aperiam sit porro, dignissimos debitis, commodi tempora. Illo, sed assumenda. Sint, saepe!</p>
+                </div>
+                <a href="#">Saber más</a>
+        </section>
+
+        <section class="caja caja2">
+            <img class="pic2" src="images/graphics02.png" alt="pic2">
+                <div>
+                    <h3>El titulo de este bloque tampoco esta mal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quia itaque. Consectetur, laborum. Nostrum, eos dolorem, deserunt quam eius neque molestiae sequi rerum, mollitia expedita voluptatum nesciunt incidunt! Rem, ipsam?</p>
+                </div>
+                <a href="#">Saber más</a>
+        </section>
+
+        <section class="caja caja3">
+            <img class="pic3" src="images/graphics03.png" alt="pic3">
+                <div>
+                    <h3>Este titulo tambien tiene su atractivo</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem placeat saepe commodi libero in. Officia magnam fuga, laboriosam quia, dolorem quos aspernatur, sapiente quisquam delectus repellendus recusandae reprehenderit pariatur ea!</p>
+                </div>
+                <a href="#">Saber más</a>
+        </section>
+
+    </section>
+    
+
+
+</body>
+</html>
